@@ -11,9 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon'
 import { MatTooltipModule } from '@angular/material/tooltip'
+import { MatCardModule } from '@angular/material/card';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatExpansionModule,
     MatIconModule,
     MatTooltipModule,
+    MatCardModule,
     FlexLayoutModule,
     AppRoutingModule,
   ],
