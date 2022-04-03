@@ -8,10 +8,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../../app/app-routing.module';
 import { MessagesComponent } from './components/messages/messages.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const COMPONENTS = [
   MessagesComponent,
-  ToolbarComponent
+  ToolbarComponent,
+  PageNotFoundComponent
 ];
 
 const MODULES = [

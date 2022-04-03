@@ -15,7 +15,7 @@ export class AppComponent {
       toolTipText: "Dashboard"
     },
     {
-      icon: "group",
+      icon: "groups",
       routerLink: "/heroes",
       toolTipText: "Heroes"
     }
