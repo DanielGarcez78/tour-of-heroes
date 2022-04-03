@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroService } from '../core/services/hero.service';
-import { Hero } from '../core/models/hero.model';
+import { HeroService } from '../../../core/services/hero.service';
+import { Hero } from '../../../core/models/hero.model';
 
 @Component({
   selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  templateUrl: './hero-list.component.html',
+  styleUrls: ['./hero-list.component.scss']
 })
-export class HeroesComponent implements OnInit{
+export class HeroListComponent implements OnInit{
 
   displayedColumns: string[] = ['id', 'name']
 
