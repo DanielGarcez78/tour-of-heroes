@@ -20,7 +20,7 @@ export class HeroListComponent implements OnInit{
   }
 
   getHeroes() : void {
-    this.heroService.getHerores().subscribe(
+    this.heroService.getAll().subscribe(
       (data) => {
         this.heroes = data;
       }

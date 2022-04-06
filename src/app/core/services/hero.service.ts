@@ -15,16 +15,22 @@ export class HeroService {
   constructor(private messageService : MessageService,
               private httpClient : HttpClient) {}
 
-  getHerores() : Observable<Hero[]> {
+  getAll() : Observable<Hero[]> {
     return this.httpClient.get<Hero[]>(this.heroesURL).pipe(
       tap((heroes) => this.log(`Fetched ${heroes.length} hero(es)`))
     );
   }
 
-  getHero(id: number) : Observable<Hero> {
+  get(id: number) : Observable<Hero> {
     return this.httpClient.get<Hero>(`${this.heroesURL}/${id}`).pipe(
       tap((hero) => this.log(`Fetched hero id=${hero.id} and name=${hero.name}`))
-    )
+    );
+  }
+
+  update(hero : Hero) : Observable<Hero> {
+    return this.httpClient.put<Hero>(`${this.heroesURL}/${hero.id}`, hero).pipe(
+      tap((hero) => this.log(`Updated hero id=${hero.id} and name=${hero.name}`))
+    );
   }
 
   private log(message: string) {
